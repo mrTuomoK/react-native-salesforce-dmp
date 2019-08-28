@@ -23,7 +23,8 @@ import java.util.HashMap;
 class RNSalesforceDMPModule extends ReactContextBaseJavaModule implements KruxConsentCallback, KruxSegments {
     private static final String SALESFORCE_DMP = "RNSalesforceDMPModule";
 
-    private final Application _application;
+    // private final Application _application;
+    private final ReactApplicationContext _application;
     private boolean _initialised;
     private Promise _consentSetPromise;
     private Promise _consentGetPromise;
@@ -31,10 +32,11 @@ class RNSalesforceDMPModule extends ReactContextBaseJavaModule implements KruxCo
     private Promise _consumerPortabilityPromise;
     private String _segments;
 
-    RNSalesforceDMPModule(ReactApplicationContext reactContext, Application application) {
+    // RNSalesforceDMPModule(ReactApplicationContext reactContext, Application application) {
+    RNSalesforceDMPModule(ReactApplicationContext reactContext) {
         super(reactContext);
-
-        this._application = application;
+        // this._application = application;
+        this._application = reactContext;
     }
 
     @Override
