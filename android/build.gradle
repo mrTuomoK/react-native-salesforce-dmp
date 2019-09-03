@@ -33,6 +33,6 @@ repositories {
 }
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
-    compile fileTree(dir: 'aar', include: ['*.aar'])
+    implementation 'com.facebook.react:react-native:+'
+    implementation fileTree(dir: 'aar', include: ['*.aar'])
 }
